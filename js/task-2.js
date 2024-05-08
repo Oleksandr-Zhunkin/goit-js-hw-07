@@ -1,8 +1,6 @@
 const listGallery = document.querySelector('.gallery');
 
-const allItems = document.createElement('ul');
-
-allItems.classList.add('gallery');
+const allItems = [];
 
 function createMarkup(arr) {
   arr.forEach(element => {
@@ -11,12 +9,10 @@ function createMarkup(arr) {
     image.setAttribute('src', `${element.url}`);
     image.setAttribute('alt', `${element.alt}`);
     item.appendChild(image);
-    allItems.append(item);
+    allItems.push(item);
   });
+  listGallery.append(...allItems);
 }
-listGallery.before(allItems);
-
-listGallery.remove();
 
 const images = [
   {
