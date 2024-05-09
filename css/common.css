@@ -144,3 +144,10 @@ input {
   color: #fff;
   border: transparent;
 }
+[id='controls'] input {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 8px 40px;
+  width: 150px;
+  height: 40px;
+}
